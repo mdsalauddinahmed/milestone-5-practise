@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handlers-status">default text</h3>
+    <h2 id="event-status">Handle by addEventListener</h2>
+    <button onclick="handleOnClick()">Handle element by add onclick Functions</button>
+    <button id="event-listener">Handle by Event Listener</button><br><br>
+        <p id="input-text-display">This is default someone Name</p>
+      <input id="input-field" type="text">
+      <button id="btn-update">Update</button>
+    
+    <script>
+        function handleOnClick(){
+            const handlerStatus = document.getElementById('handlers-status')
+            handlerStatus.innerText='it is clicked'
+        }
+
+        document.getElementById('event-listener').addEventListener('click',function(){
+            const handleStatus =document.getElementById('event-status');
+            handleStatus.innerText="It is clicked addEventListener method"
+        })
+
+    </script>
+    <script src="/module26-4/event.js"></script>
+</body>
+</html>
