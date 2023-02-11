@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <section style="text-align:center">
+        <h1>Hello,brother</h1>
+        <ul id="item-container">
+            <li class="item"> Lorem, ipsum.lorem1</li>
+            <li class="item"> Lorem, ipsum.lorem2</li>
+            <li class="item"> Lorem, ipsum.lorem3</li>
+            <li class="item"> Lorem, ipsum.lorem4</li>
+            <li class="item"> Lorem, ipsum.lorem5</li>
+            <li class="item"> Lorem, ipsum.lorem6</li>
+        </ul>
+        <button id="btn">Add item</button>
+     </section>
+     <script>
+        // const items = document.getElementsByClassName('item');
+        // // console.log(items)
+        //   for(const item of items){
+        //      item.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target)
+        //      })
+        //   }
+         document.getElementById('item-container').addEventListener('click',function(event){
+        //   /console.log(event.target)
+         event.target.parentNode.removeChild(event.target)
+          })
+     const ItemContainer=document.getElementById('item-container');
+      document.getElementById('btn').addEventListener('click',function(event){
+        const li =document.createElement('li')
+        li.innerText="New item is added";
+        li.classList.add('item')
+        ItemContainer.appendChild(li)
+      })
+     </script>
+</body>
+</html>
